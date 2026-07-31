@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "file-integrity-monitor"
+version = "0.1.0"
+description = "Fast, cross-platform CLI for real-time file and directory integrity monitoring."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "p4p2r0", email = "294768138+p4p2r0@users.noreply.github.com" }]
+keywords = ["fim", "file-integrity-monitoring", "security", "watchdog", "cli", "monitoring"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: System :: Filesystems",
+    "Topic :: System :: Monitoring",
+]
+dependencies = ["watchdog>=4.0.0"]
+
+[project.urls]
+Homepage = "https://github.com/p4p2r0/file-integrity-monitor"
+Issues = "https://github.com/p4p2r0/file-integrity-monitor/issues"
+
+[project.scripts]
+file-integrity-monitor = "file_integrity_monitor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
