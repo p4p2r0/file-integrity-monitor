@@ -1,6 +1,6 @@
 # file-integrity-monitor
 
-Real-time file and directory integrity monitor.
+Real-time file and directory integrity monitor with SQLite logging.
 
 ## Why
 
