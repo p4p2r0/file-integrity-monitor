@@ -1,14 +1,15 @@
 [build-system]
-requires = ["setuptools>=68"]
-build-backend = "setuptools.build_meta"
+requires = ["uv_build>=0.12.0,<0.13.0"]
+build-backend = "uv_build"
 
 [project]
 name = "file-integrity-monitor"
-version = "0.1.0"
-description = "Fast, cross-platform CLI for real-time file and directory integrity monitoring."
+version = "0.1.1"
+description = "Real-time file and directory integrity monitor with SQLite logging."
 readme = "README.md"
 requires-python = ">=3.8"
-license = { text = "MIT" }
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [{ name = "p4p2r0", email = "294768138+p4p2r0@users.noreply.github.com" }]
 keywords = ["fim", "file-integrity-monitoring", "security", "watchdog", "cli", "monitoring"]
 classifiers = [
@@ -16,7 +17,6 @@ classifiers = [
     "Environment :: Console",
     "Intended Audience :: Information Technology",
     "Intended Audience :: System Administrators",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.8",
@@ -36,6 +36,3 @@ Issues = "https://github.com/p4p2r0/file-integrity-monitor/issues"
 
 [project.scripts]
 file-integrity-monitor = "file_integrity_monitor.cli:main"
-
-[tool.setuptools.packages.find]
-where = ["src"]
