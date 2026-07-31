@@ -1,5 +1,4 @@
 # file-integrity-monitor
-<<<<<<< HEAD
 
 Real-time file and directory integrity monitor with optional SQLite logging.
 
